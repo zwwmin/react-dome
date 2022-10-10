@@ -1,20 +1,20 @@
-import { useEffect, useState } from 'react'
-import reactLogo from '@assets/react.svg'
-import { Button } from 'antd'
-import './index.module.scss'
-import { useNavigate } from 'react-router-dom'
+import { useEffect, useState } from "react";
+import reactLogo from "@assets/react.svg";
+import { Button } from "antd";
+import "./index.module.scss";
+import { useNavigate } from "react-router-dom";
 
 function home() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
-  useEffect(() =>{
-    console.log(count)
-  },[count])
+  useEffect(() => {
+    console.log(count);
+  }, [count]);
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const goAboutPage = () => {
-    navigate('/login')
-  }
+    navigate("/login");
+  };
 
   return (
     <div className="App">
@@ -32,10 +32,14 @@ function home() {
           count is {count}
         </button>
       </div>
-      <Button type="primary" onClick={() => setCount((count) => count - 1)}>-1</Button>
-      <Button type="primary" onClick={goAboutPage}>跳转login2</Button>
+      <Button type="primary" onClick={() => setCount((count) => count - 1)}>
+        -1
+      </Button>
+      <Button type="primary" onClick={goAboutPage}>
+        跳转login
+      </Button>
     </div>
-  )
+  );
 }
 
-export default home
+export default home;
